@@ -18,9 +18,10 @@ def add_item():
     # Get item from the POST body
     req_data = request.get_json()
     item = req_data['item']
-
+    due_date= req_data['due_date']
+    
     # Add item to the list
-    res_data = helper.add_to_list(item)
+    res_data = helper.add_to_list(item,due_date)
 
     # Return error if item not added
     if res_data is None:
