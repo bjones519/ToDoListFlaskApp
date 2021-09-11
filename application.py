@@ -3,7 +3,7 @@ from flask import Flask, request, Response, render_template
 import json
 
 
-app = Flask(__name__)
+application = app = Flask(__name__)
 
 @app.route('/')
 def main():
